@@ -1,413 +1,404 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-	<title>MintyDAO</title>
-	<meta name="title" content="MintyDAO" />
-	<meta name="description" content="MintyDAO" />
-	<meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
-	<meta name="keywords" content="MintyDAO" />
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-	<meta name="mobile-web-app-capable" content="yes" />
-	<meta name="theme-color" content="#ffc000">
-	<meta name="msapplication-navbutton-color" content="#ffc000">
-	<meta name="apple-mobile-web-app-status-bar-style" content="#ffc000">
-	<link rel="apple-touch-icon" sizes="128x128" href="images/MintyDAO.png">
-	<link href="images/MintyDAO.png" sizes="192x192" rel="icon" />
-	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-	<link href="css/fontawesome-all.min.css" rel="stylesheet">
-	<link href="css/style.css?v=6" rel="stylesheet" />
-
-	<!-- <script>less = { env: 'development'};</script>
-	<script src="less.js"></script>
-	<script>less.watch();</script> -->
-
-	<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
-	<script src="js/bootstrap.min.js" type="text/javascript"></script>
-	<script src="js/mobile-chrome-vh-fix.js" type="text/javascript"></script>
-	<script src="js/jquery.waypoints.min.js" type="text/javascript"></script>
-	<script src="js/mobile-detect.min.js" type="text/javascript"></script>
-	<script src="js/scripts.js?v=2" type="text/javascript"></script>
-	<script src="js/mixpanel-config.js" type="text/javascript"></script>
+    <title>MintyDAO</title>
+    <link rel="shortcut icon" type="image/jpg" href="assets/images/favicon.ico"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css?v=2">
+    <link rel="stylesheet" href="assets/css/wow.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link type="text/css" rel="stylesheet" href="assets/clock_assets/flipclock.css" />
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-XKCWRHS6D2"></script>
 	<script src="js/google-analytics-config.js" type="text/javascript"></script>
-	<link rel="stylesheet" href="css/wow.css">
-	<script type="text/javascript" src="js/wow.js"></script>
 
-	<script>
+    <script>
         if(!GOOGLE_ANALYTICS_USER_TRACKER_PROJECT_TOKEN)
             var GOOGLE_ANALYTICS_USER_TRACKER_PROJECT_TOKEN = 'G-JVV35V4GTP';
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
         gtag('config', GOOGLE_ANALYTICS_USER_TRACKER_PROJECT_TOKEN);
-  
+    
         gtag('event', 'screen_view', {
               'screen_name': "OnLoad"
           });
       </script>
 
-	<!-- 	
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,800;1,300;1,400;1,700;1,800&display=swap" rel="stylesheet"> -->
-
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link
-		href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-		rel="stylesheet">
-
-	<script>
-		$(document).ready(function ($) {
-			$('.home-wrap #content-wrapper').waypoint(function (direction) {
-				$("#navbar").toggleClass('sticky', direction == 'down');
-			}, {
-				offset: '160px'	
-			});
-			$('.home-wrap #main-wrapper').waypoint(function (direction) {
-				$("#navbar").toggleClass('sticky-ani', direction == 'down');
-			}, {
-				offset: '-100px'
-			});
-		});
-	</script>
-
-	<link type="text/css" rel="stylesheet" href="clock_assets/flipclock.css" />
-	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+<style>
+    .button_yellow{padding: 12px 30px;display: inline-block;background: #1ba895;margin-bottom: 15px;color: #000;font-size: 22px;border-radius: 25px;font-weight:600}
+    .button_yellow:hover{box-shadow: 0px 0px 10px #1ba895;color: #000;}
+    .card{border: 1px solid rgba(55, 55, 55, 0.4);}
+    .accordion .btn-link{color:#1ba895}
+    body .flip-clock-wrapper ul li a div div.inn,
+    body .flip-clock-small-wrapper ul li a div div.inn {
+        color: #CCCCCC;
+        background-color: #292c2d;
+    }
+    body .flip-clock-dot,
+    body .flip-clock-small-wrapper .flip-clock-dot {
+        background: #CCCCCC;
+    }
+    body .flip-clock-wrapper .flip-clock-meridium a,
+    body .flip-clock-small-wrapper .flip-clock-meridium a {
+        color: #CCCCCC;
+    }
+    .social_media_links a{opacity: 0.2;color: white;margin-right:20px; font-size: 22px;position: relative;}
+    .social_media_links a:hover{opacity: 1;}
+</style>
 
 </head>
+<body data-spy="scroll" data-target=".navbar" data-offset="50" style="position: relative;">
+    <img class="shine" src="assets/images/home-cat_left.d99aff71.png" alt="">
+    <img class="shine shine-right" src="assets/images/home-cat_right.3de19f72.png" alt="">
+    <div id="outer-wrapper" class="main_body">
 
-<body style="background-color: black;">
-	<div id="outer-wrapper" class="home-wrap">
-		<div id="main-wrapper">
-			<div id="bg-wrapper"></div>
+        <!-- navbar starts -->
+        <header id="main_navbar" class="fixed-top">
+            <div class="container h-100">
+                <nav class="navbar navbar-expand-md  navbar-dark h-100 my-auto">
+                    <!-- Brand -->
+                    <a class="navbar-brand" value="CoTrader" href="#"><img src="assets/images/MintyDAO-orig.png" alt="cotrader_logo.png">Minty Dao</a>
+                    <!-- Toggler/collapsibe Button -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#collapsibleNavbar">
+                        <!-- <span class="navbar-toggler-icon"></span> -->
+                        <svg class="svg-inline--fa fa-bars fa-w-14" style="color: rgb(255, 255, 255);"
+                            aria-hidden="true" data-prefix="fas" data-icon="bars" role="img"
+                            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg="">
+                            <path fill="currentColor"
+                                d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z">
+                            </path>
+                        </svg>
+                    </button>
 
-			<!-- <canvas id="bgCanvas"></canvas> -->
-			<div id="navbar">
-				<div class="container">
-					<div class="navbar-header">
-						<a class="logo-main" href="index.html" value="Home" style="margin-left:-20px;">
-							<span class="logo-main-dark"><img src="images/MintyDAO.png"
-									alt="MintyDAO " /></span>
-							<span class="logo-main-light"><img src="images/MintyDAO.png"
-									alt="MintyDAO" /></span>
-						</a>
+                    <!-- Navbar links -->
+                    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                        <ul id="navbar_id" class="navbar-nav ml-auto">
+                            <li class="nav-item">
+                                <a class="nav-link n-link" value="Socials" href="#Socials">Socials</a>
+                            </li>
+                            <li class="nav-item ml-4">
+                                <a class="nav-link" value="Get Bonus" href="#platform">Platform</a>
+                            </li>
+                            <!-- <li class="nav-item ml-4">
+                                <a class="nav-link" value="Docs" target="_blank" href="mintydao.gitbook.io">Docs</a>
+                            </li> -->
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <!-- navbar ends -->
 
-						<div class="banner-header-button wow fadeInUp buttonresonsive" style="margin-left: auto; margin-right:auto; margin-top:10px;">	
-								<a class="button" href="javascript:void(0)" data-toggle="modal" style="margin:5px; background-color:black; color:white"
-								data-target="#exampleModal"
-								value="TopGn" download>Follow Us</a>
-								<!-- <a class="button" href="https://defi.mintydao.io/fetch" target="_blank" style="margin:5px; background-color:black; color:white"
-								value="TopGn" download>Dapp</a> -->
-								<!-- <a class="button" href="https://dextools.io/app/ether/pair-explorer/0x6bcbef39c8a0ce72ee4a6f4b3a1d8eb1ce127a26" target="_blank" style="margin:5px; background-color:black; color:white"
-								value="TopGn" download>Chart</a> -->
-								<!-- <a class="button" href="https://mintydao.gitbook.io/" target="_blank" style="margin:5px; background-color:black; color:white"
-								value="TopGn" download>Docs</a> -->
-						</div>
-						
-						<!-- <a type="button" class="nav-toggle nav-trigger" value="Navigation">
-							<div class="nav-icon"><span></span></div>
-						</a>
-						<div class="nav-wrap">
-							<nav id="nav-right" >
-								<ul class="banner-social">
-								</ul>
-							</nav>
-						</div> -->
-					</div>
-				</div>
-			</div>			
+        <!-- hero section starts -->
+        <section id="hero_section" class="section_my">
+            <div class="h-100">
+                <div class="row justify-content-end h-100">
+                    <div class="col-lg-3 col-md-3 text-center">
+                        <div class="animate wow bounceInLeft" data-wow-delay="0.5s">
+                            <img src="assets/images/MintyDAO.png" style="max-width:450px; width:90%" class="MintyDAO_LOGO wow fadeInUp">
+                        </div>
+                    </div>
 
-			<div id="content-top-wrapper">
-				<div id="banner-wrapper">
-					<div id="banner-main">
-						<div class="banner-text-wrap">
-							<div class="container d-block">
-								<div id="aboveVideo" class="row row-eq-height animate">
-									<div id="HalWSB" class="col-md-7 align-self-md-start align-self-start" style="margin-top: -0px; margin-left:-20px;">
-										<img class="spinX" src="images/MintyDAO.png" alt="" style="width:600px; height:auto"/>
-									</div>
-									<div id="topText" class="col-md-5 align-self-md-start">
-										<div class="banner-text-start">
-											<div class="banner-header text-center ">
-												<div class="banner-header-title">
-													<div class="banner-main-top">
-														<h1 id="allDefi" class="text-white font-lg wow fadeInUp backInUp" style="line-height: 1; margin-top:0px;"
-															data-wow-duration="2s">MintyDAO</h1>
-															<div class="text-white font-lg wow fadeInUp" style="line-height: 1; font-size: 50px">NFT & ENS<br>DeFi Dapps</div><br>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="hero_content">
+                            <h1 class="title_format wow bounceInRight" data-wow-delay="0.3s">MintyDAO<br><small>NFT & ENS DeFi Dapps</small></h1>
+                            <div><h2 class="subtitle wow bounceInRight inline-box-glow" data-wow-delay="0.4s">
+                                MINTS earn from many Minty dapps such as:<br>
+                                New NFT contracts that earn Harberger Tax Fees<br>
+                                New domain names using Vitalik's ENS proposal</h2></div>
+                            <a class="button_yellow subtitle wow bounceInRight" data-wow-delay="0.5s" href="https://mintydao.gitbook.io" target="_blank">Read More</a>
+                            <div><h2 class="subtitle wow bounceInRight inline-box-glow" data-wow-delay="0.5s">
+                                Earn from DEX emission & treasury voting<br>
+                                15x slower inflation than Bitcoin at day 1<br>
+                                Earn APY when you lock MINTS Bonus<br>
+                                Audited code & Solidly fork on ETH
+                            </h2></div>
+                            <a class="button_yellow subtitle wow bounceInRight" data-wow-delay="0.5s" href="https://defi.mintydao.io/fetch" target="_blank">MINTS Bonus</a>
 
-															<!-- data-wow-duration="2s">Next ENS & NFT<br>DeFi Stack</h1> -->
-															<!-- data-wow-duration="2s">All DeFi<br>& NFT Earnings + Reflection</h1> -->
+                            <h3 class="title_3 animate wow bounceInLeft" data-wow-delay="0.5s" style="padding-top: 0px;">First NFT Announcement</h3>
+                            <div id="clock" class="newclasclock-builder-output animate wow bounceInRight" data-wow-delay="0.5s">
+                                <div class="clock-builder-output" style="display: inline-block;width: auto;"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 text-center">
+                        <div class="animate wow bounceInRight" data-wow-delay="0.5s">
+                            <img src="assets/images/MintyDAO.png" style="max-width:450px; width:90%" class="MintyDAO_LOGO2 classwow fadeInUp">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- hero section ends -->        
+        <!-- social links starts -->
+        <section class="social_links" id="Socials" style="padding-top: 100px; padding-bottom: 100px;">
+            <div class="container">
+                <div class="row wow fadeInUp">
+                    <div class="SocialRow__SocialCol-ixzvoG bAJqdH col text-center">
+                        <span class="SocialRow__SocialLabel-iMphGc xXDTb">Socials</span>
+                        <span class="social_media_links">
+                            <a href="https://twitter.com/MintyDAO" data-toggle="tooltip" data-placement="bottom" title="Twitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                            <a href="https://t.me/MintyDAOnews" data-toggle="tooltip" data-placement="bottom" title="TG News" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                            <a href="https://discord.gg/x4MeeXUW3R" data-toggle="tooltip" data-placement="bottom" title="Discord" target="_blank"><i class="fab fa-discord"></i></a>
+                            <a href="https://github.com/MintyDAO" data-toggle="tooltip" data-placement="bottom" title="Github" target="_blank"><i class="fab fa-github"></i></a>
+                            <a href="https://www.reddit.com/r/MintyDAO" data-toggle="tooltip" data-placement="bottom" title="Reddit" target="_blank"><i class="fab fa-reddit-alien"></i></a>
+                            <a href="https://mintydao.substack.com/" data-toggle="tooltip" data-placement="bottom" title="Substack" target="_blank"><i class="fab fa-medium-m"></i></a>
+                            <a href="https://www.instagram.com/MintyDAOio/" data-toggle="tooltip" data-placement="bottom" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://t.me/MintyDAOio" data-toggle="tooltip" data-placement="bottom" title="TG Chat" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-														<!-- <h2 id="inOneCoin" class="text-white font-lg2  wow fadeInUp for-leter-space" style="line-height: 1;"
-															data-wow-duration="2s">
-															Uni<span class="Textfadehome fied">fied</span> in One
-															<span class="Textfadehome coinn">Coin</span>
-														</h2> -->
-														<!-- <h2 id="inOneClick" class="text-white font-lg2 wow fadeInUp" style="line-height: 1; margin-top:-20px;"> -->
-															<!-- Simpli<span class="Textfadehome" >fied</span> in  -->
-															<!-- Battle <span class="Textfadehome">Bets</span> -->
-														<!-- <br> -->
-														<!-- <div class="text-white font-lg2 wow fadeInUp" style="line-height: 1.2; font-size: 25px">DeFi 3.0 DEX & DAO Treasury</div> -->
-														<div class="text-white font-lg2 wow fadeInUp" style="line-height: 1.2; font-size: 22px">MINTS earn from Minty dapps</div>
-														<div class="text-white font-lg2 wow fadeInUp" style="line-height: 1.2; font-size: 22px">NFTs earn Harberger Tax Fees</div>
-														<div class="text-white font-lg2 wow fadeInUp" style="line-height: 1.2; font-size: 22px">ENSs earn via Vitalik's proposal</div>
-														<br>
-														<!-- <div class="text-white font-lg2 wow fadeInUp" style="line-height: 1; font-size: 25px">Tokens for people. OccupyDeFi<br><br>Fair Launch, Feb 28</div> -->
-														<!-- <div class="text-white font-lg2 wow fadeInUp" style="line-height: 1; font-size: 20px">Bonus for early buys on days 1-4:</div>
-														<div class="text-white font-lg2 wow fadeInUp" style="line-height: 1; font-size: 20px">100% 75% 50% 25%</div>
-														<div class="text-white font-lg2 wow fadeInUp" style="line-height: 1; font-size: 15px">Bonus given on month 4</div> -->
-													</div>
-													<div class="d-flex justify-content-center bd-highlight mb-3">
-														<div class="banner-header-button wow fadeInUp buttonresonsive">	
-															<a class="button" href="https://mintydao.gitbook.io" target="_blank" style="color:black; margin:5px; margin-top:0px; font-size: 20px;"
-																data-target="#exampleModal"
-																value="TopGn" download>Read More</a>
-														</div>
-													</div>
+        <!-- social links ends -->
 
-														<div class="text-white font-lg2 wow fadeInUp" style="line-height: 1.2; font-size: 22px">Solidly ETH, 15x slower inflation</div>
-														<div class="text-white font-lg2 wow fadeInUp" style="line-height: 1.2; font-size: 22px">Votable Onchain Treasury</div>
-														<div class="text-white font-lg2 wow fadeInUp" style="line-height: 1.2; font-size: 22px">Stealth Launch</div>
-														<div class="text-white font-lg2 wow fadeInUp" style="line-height: 1.2; font-size: 22px">Under $100K MC & FDV</div>
-														<div class="text-white font-lg2 wow fadeInUp" style="line-height: 1.2; font-size: 22px">Lock MINTS to earn APY</div><br>
-														<!-- <div class="text-white font-lg2 wow fadeInUp" style="line-height: 0.2; font-size: 22px">Solidly fork on ETH</div><br> -->
-	
-													<div class="d-flex justify-content-center bd-highlight mb-3">
-														<div class="banner-header-button wow fadeInUp buttonresonsive">	
-															<a class="button" href="https://defi.mintydao.io/fetch" target="_blank" style="color:black; margin:5px; margin-top:0px; font-size: 20px;"
-																data-target="#exampleModal"
-																value="TopGn" download>Bonus MINTS Now</a>
-														</div>
-													</div>
+        <!-- video section starts -->
+        <section id="platform" class="video_section" style="margin-bottom:100px; padding-top: 100px;">
+            <div class="container" style="max-width: 800px;">
+                <h3 class="wow fadeInUp title text-center">ENS, NFT & DeFi</h3>
+                <h2 class="title_format wow fadeInUp text-center">Innovation Stack</h2>
+
+                <div class="accordion" id="accordionDefi">
+                    <div class="card">
+                      <div class="card-header" id="item_1">
+                        <h2 class="mb-0"><button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse_1"><i class="fa fa-plus"></i> MINTS are used & earn from various dapps</button></h2>
+                      </div>
+                      <div id="collapse_1" class="collapse show" aria-labelledby="item_1" data-parent="#accordionDefi">
+                        <div class="card-body">
+                          <p>Get & lock MINTS to get mintsNFTs.<br>
+                            These automatically earn you APY rewards.<br>
+                            mintsNFTs give you free NFT & domain name access.<br>
+                            mintsNFTs let you vote on DEX emissions & treasury.<br>
+                            You can later lock mintsNFTs to earn more.<br>
+                            You'll earn on DeFi, NFT & ENS trades & fees.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header" id="item_2">
+                        <h2 class="mb-0">
+                          <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#collapse_2"><i class="fa fa-plus"></i> ENS competitor with demand-based fees (Vitalik proposal)</button>
+                        </h2>
+                      </div>
+                      <div id="collapse_2" class="collapse" aria-labelledby="item_2" data-parent="#accordionDefi">
+                        <div class="card-body">
+                          <p>Problem: old ENS sold best domains to squatters.<br>
+                            Solution: market demand-based recurring fees.<br>                    
+                            This is a new domain system, not the old ENS. <br>
+                            You'll get a domain like name.m or name.minty.<br>
+                            You'll be able to use this as a user-name later in Minty Socials.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-header" id="item_3">
+                        <h2 class="mb-0">
+                          <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse_3"><i class="fa fa-plus"></i> NFT with recurring "Harberger Tax" fees as royalties solution.</button>
+                        </h2>
+                      </div>
+                      <div id="collapse_3" class="collapse" aria-labelledby="item_3" data-parent="#accordionDefi">
+                        <div class="card-body">
+                          <p>Trading fees are being circumvented by some NFT exchanges.<br>
+                            This means artists have no funds or long term incentive for dev.<br>
+                            We're implementing Harberger Tax fees + trading fees.<br>
+                            It works like this:<br>
+                            No matter where your NFT is, others can force-buy it from you.<br>
+                            You protect your NFT from force-buy by paying e.g. 2%/year of the protected-value.<br>
+                            Others can buy it at 120% this protected-value price.<br>
+                            10% of every trade goes to artists.<br>
+                            10% goes to MINTS & mintsNFT lockers.<br>
+                            In case of 0 protected-value, buyers can get NFTs at 60% the mint or last force-buy price.<br>
+                            10% goes to the NFT artist.<br>
+                            50% goes to MINTS & mintsNFT lockers<br>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="item_4">
+                          <h2 class="mb-0">
+                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse_4"><i class="fa fa-plus"></i> DeFi stack</button>
+                          </h2>
+                        </div>
+                        <div id="collapse_4" class="collapse" aria-labelledby="item_4" data-parent="#accordionDefi">
+                          <div class="card-body">
+                            <p>Our DEX expands from a Solidly fork (on ETH).<br>
+                                DAO treasury building with price-increasing mechanism called MintBonus.<br>
+                                Every time someone buys MINTS via MintBonus, MINTS price increases.<br>
+                                Meanwhile, treasury and liquidity of MINTS increases as well.</p>
+                          </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="item_5">
+                        <h2 class="mb-0">
+                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse_5"><i class="fa fa-plus"></i> MintyBets</button>
+                        </h2>
+                        </div>
+                        <div id="collapse_5" class="collapse" aria-labelledby="item_5" data-parent="#accordionDefi">
+                        <div class="card-body">
+                            <p>Augur style user-created bets using DEX as the oracle.<br>
+                                Bet on anything, like if & when ETH will flip BTC<br>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="item_6">
+                        <h2 class="mb-0">
+                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse_6"><i class="fa fa-plus"></i> Launchpad</button>
+                        </h2>
+                        </div>
+                        <div id="collapse_6" class="collapse" aria-labelledby="item_6" data-parent="#accordionDefi">
+                        <div class="card-body">
+                            <p>All the Minty offers will be available to launchpad projects.<br>
+                                This will include the network effect & userbase of all prior projects.
+                            </p>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="item_7">
+                        <h2 class="mb-0">
+                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse_7"><i class="fa fa-plus"></i> Minty Chains</button>
+                        </h2>
+                        </div>
+                        <div id="collapse_7" class="collapse" aria-labelledby="item_7" data-parent="#accordionDefi">
+                        <div class="card-body">
+                            <p>Minty treasury is movable by vote.<br>
+                                All Minty projects will be able to move to their own L2 & L1 chains.</p>
+                        </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="item_8">
+                        <h2 class="mb-0">
+                            <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse_8"><i class="fa fa-plus"></i> Minty Worlds</button>
+                        </h2>
+                        </div>
+                        <div id="collapse_8" class="collapse" aria-labelledby="item_8" data-parent="#accordionDefi">
+                        <div class="card-body">
+                            <p>As PaaS payment to MintyDAO, game economy tokens might be earned by locking MINTS.<br>
+                                Users of partnered games can vote for new features using locked MINTS, called mintsNFTs.</p>
+                        </div>
+                        </div>
+                    </div>
+                  <div class="card">
+                    <div class="card-header" id="item_9">
+                      <h2 class="mb-0">
+                        <button type="button" class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse_9"><i class="fa fa-plus"></i> Minty Socials</button>
+                      </h2>
+                    </div>
+                    <div id="collapse_9" class="collapse" aria-labelledby="item_9" data-parent="#accordionDefi">
+                      <div class="card-body">
+                        <p>Social network dapps suite will have ad & revenue sharing & tokenized content creators.</p>
+                        <p><a href="https://mintydao.gitbook.io/docs/#roadmap-status" target="_blank">Roadmap Status</a></p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+        </section>
+        <!-- video section ends -->
+
+        <footer class="footer_section">
+            <div class="container">
+                <div class="row ">
+                    <div class="col-2 offset-1 col-sm-2 col-md-1 offset-md-0">
+                        <img class="footer_logo wow fadeInUp"
+                            src="assets/images/MintyDAO-orig.png">
+                    </div>
+                    <div class="col-10 offset-1 col-md-5 offset-md-0">
+                        <h3 class="footer_title wow fadeInUp">Why MintyDao</h3>
+                        <p class="wow fadeInUp"> For fun, freedom, community, & public goods via decentralization</p>
+                    </div>
+                    <div class="col-10 offset-1 col-md-5 offset-md-1">
+                        <h3 class="footer_title wow fadeInUp">Join the Community</h3>
+                        <ul class="social_media_links">
+                            <a href="https://twitter.com/MintyDAO" data-toggle="tooltip" data-placement="bottom" target="_blank" data-original-title="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="https://t.me/MintyDAOnews" data-toggle="tooltip" data-placement="bottom" target="_blank" data-original-title="TG News"><i class="fab fa-telegram-plane"></i></a>
+                            <a href="https://discord.gg/x4MeeXUW3R" data-toggle="tooltip" data-placement="bottom" target="_blank" data-original-title="Discord"><i class="fab fa-discord"></i></a>
+                            <a href="https://github.com/MintyDAO" data-toggle="tooltip" data-placement="bottom" target="_blank" data-original-title="Github"><i class="fab fa-github"></i></a>
+                            <a href="https://www.reddit.com/r/MintyDAO" data-toggle="tooltip" data-placement="bottom" target="_blank" data-original-title="Reddit"><i class="fab fa-reddit-alien"></i></a>
+                            <a href="https://mintydao.substack.com/" data-toggle="tooltip" data-placement="bottom" target="_blank" data-original-title="Substack"><i class="fab fa-medium-m"></i></a>
+                            <a href="https://www.instagram.com/MintyDAOio/" data-toggle="tooltip" data-placement="bottom" target="_blank" data-original-title="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="https://t.me/MintyDAOio" data-toggle="tooltip" data-placement="bottom" target="_blank" data-original-title="TG Chat"><i class="fab fa-telegram-plane"></i></a>
+                        </span>
+                    </div>
+
+                </div>
 
 
-													<!-- <div class="banner-header-button wow fadeInUp buttonresonsive" style="margin-left: auto; margin-right:auto;">	
-														<a class="button" href="javascript:void(0)" data-toggle="modal" style="margin:5px; background-color:black; color:white"
-														data-target="#exampleModal"
-														value="TopGn" download>$1K MC Launch - 91,000% APY</a>
-													</div> -->
-						
-													<div class="text-white font-lg2 wow fadeInUp" style="line-height: 0.1; font-size: 25px">First NFT Announcement</div><br>
-
-													<div id="clock" class="newclasclock-builder-output">
-														<div class="clock-builder-output">														
-															<script type="text/javascript"
-																src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-															<script type="text/javascript" src="clock_assets/flipclock.js"></script>
-															<style text="text/css">
-																body .flip-clock-wrapper ul li a div div.inn,
-																body .flip-clock-small-wrapper ul li a div div.inn {
-																	color: #CCCCCC;
-																	background-color: #140e1a;
-																}
-
-																body .flip-clock-dot,
-																body .flip-clock-small-wrapper .flip-clock-dot {
-																	background: #CCCCCC;
-																}
-
-																body .flip-clock-wrapper .flip-clock-meridium a,
-																body .flip-clock-small-wrapper .flip-clock-meridium a {
-																	color: #CCCCCC;
-																}
-															</style>
-															<script type="text/javascript">
-																$(function () {
-																	FlipClock.Lang.Custom = { days: 'Days', hours: 'Hours', minutes: 'Minutes', seconds: 'Seconds' };
-																	var opts = {
-																		clockFace: 'DailyCounter',
-																		countdown: true,
-																		language: 'Custom'
-																	};
-																	opts.classes = {
-																		active: 'flip-clock-active',
-																		before: 'flip-clock-before',
-																		divider: 'flip-clock-divider',
-																		dot: 'flip-clock-dot',
-																		label: 'flip-clock-label',
-																		flip: 'flip',
-																		play: 'play',
-																		wrapper: 'flip-clock-small-wrapper'
-																	};
-																	var countdown = 1666278000 - ((new Date().getTime()) / 1000); // from: 03/22/2021 10:00 am -0700
-																	countdown = Math.max(1, countdown);
-																	$('.clock-builder-output').FlipClock(countdown, opts);
-																});
-															</script>
-														</div>
-													</div>
-
-													<!-- <div class="banner-header-button wow fadeInUp buttonresonsive" style="margin-left: auto; margin-right:auto;">	
-														<a class="button" href="javascript:void(0)" data-toggle="modal" style="margin:5px; background-color:black; color:white"
-														data-target="#exampleModal"
-														value="TopGn" download>Get MINTS (⚠not final tokens!⚠)</a>
-													</div> -->
-
-														<!-- <div class="banner-header-button wow fadeInUp buttonresonsive">
-															<a class="button" href="https://google.com"	target="_blank" style="color:black; margin:5px;"
-																value="TopGn" download>Docs</a>		
-														</div>								 -->
-												    </div>
-													<!-- <div class="text-white font-lg2 wow fadeInUp" style="line-height: 1; font-size: 25px">Minty NFT Gamification -->
-														<!--
-														<br>
-														<br>Goblin Clans:
-														<br>Atlantis
-														<br>Dune
-														<br>Lands
-														<br>Robots
-														<br>Sea Monsters
-														<br>
-														<br>Tweet at us to apply
-														-->
-													<!-- </div> -->
-
-													<!-- <div class="h5 wow fadeInUp" style="color:white;">
-													</div>-->
-													<!-- <li><a href="https://twitter.com/MintyDAO/status/1565404796601114624?s=20&t=fBkAwS-rrGd4pbTuCg5bUQ" target="_blank" value="StbTw"
-														title="Twitter">Tweet of the Day <i class="fab fa-twitter" style="padding-bottom: 10px;"></i></i></a>
-													</li> -->
-												</div>
-
-
-											</div>
-										</div>
-										
-										<!-- <div class="text-white font-lg2 wow fadeInUp center" style="margin: auto; width:99%; line-height: 1; font-size: 25px">
-											<br><br><br><br><br><br>
-											
-											DeFi 3.0: DEX liquidity & treasury building with upwards price-pressure<br><br>
-											<li>Team starts with 0 tokens. Can't dump or rug. Earns from token sales via "Fetch"</li><br>
-											<li>"Fetch" is a novel price-increasing treasury growth mechanism that locks tokens for bonuses</li><br>
-											<li>Solidly stable pools with low slippage formula and 0.01% trading fees</li><br> -->
-
-											<!-- <br>DeFi made simple: 1 click with "Fetch" does it all (DEX buy + add treasury + bonus)</li><br> -->
-											<!-- <li>First DEX with contract-controlled DAO treasury</li><br> -->
-											<!-- <li>Earn vote-bribes to adjust contract-controlled treasury on our DEX</li><br> -->
-
-											<!-- <li>15x less inflation in the first 6 months compared to Bitcoin & Curve</li><br>
-											<li>91,000% APY = 14%/week -2%/week decay</li><br>
-
-											<br>NFT fees solutions<br><br>											
-											<li>Vitalik's fix for ENS (NFTs) - recurring market-demand fees to prevent squatters</li><br>
-											<li>0xfoobar's fix for NFT royalties - recurring Harberger taxes to artists</li><br> -->
-
-											<!-- <li>User created Augur style bets e.g. "when will ETH flip BTC?", launching by Oct 2022</li><br> -->
-											<!-- <li>Chainlink collab (underway) to extend to NFT bets, stocks, or any options, by Oct 2022</li><br> -->
-											<!-- <li>Build to earn NFT & DeFi gamification system & launchpad, by 2022</li><br> -->
-
-											<!-- <li>The initially small stealth pool will grow an extra 33% with every "Fetch Bonus" buy</li><br> -->
-											<!-- <li>DEX swaps grow MINTS price by 4x every pool-sized buy, like on Uniswap V2 DEXs</li><br> -->
-											<!-- <li>Fetch Bonus reduces MINTS slippage from 4x to under 9% for big pool-sized buys</li><br> -->
-
-											<!-- <br>Bonus: limited time<br>											
-											<br><li>Fetch Bonus at launch time is higher: 50% to 800% (from 0.25 to 4 year locks)</li><br>
-
-											<div class="d-flex justify-content-center bd-highlight mb-3">
-												<div class="banner-header-button wow fadeInUp buttonresonsive">	
-													<a class="button" href="https://defi.mintydao.io/fetch" target="_blank" style="color:black; margin:5px; margin-top:0px; font-size: 25px;"
-														data-target="#exampleModal"
-														value="TopGn" download>Fetch Bonus MINTS</a>
-												</div>
-											</div> -->
-										<!-- </div> -->
-								<!-- </div>
-								<div>
-									<h1><a href="https://mintydao.gitbook.io/" target="_blank">Learn more - Gitbook Docs</a></h1>
-								</div>				 -->
-							</div>
-						</div>
-					</div>
-				</div>
-				
-			</div>
-		</div>
-
-	</div>
-<!-- TODO: WHY does it want a div here to remove red mark? -->
-<div>
-	<div class="modal fade" tabindex="-1" role="dialog" id="exampleModal">
-		<script>
-			// const GOOGLE_ANALYTICS_USER_TRACKER_PROJECT_TOKEN = 'G-XKCWRHS6D2';
-			window.dataLayer = window.dataLayer || [];
-			function gtag() { dataLayer.push(arguments); }
-			gtag('js', new Date());
-			gtag('config', GOOGLE_ANALYTICS_USER_TRACKER_PROJECT_TOKEN);
-
-			gtag('event', 'screen_view', {
-            'screen_name': "GnPu"
+            </div>
+        </footer>
+        <!-- footer ends -->
+   </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./assets/js/custom.js"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-JVV35V4GTP"></script>
+    <script src="./assets/js/GA.js"></script>
+    <script type="text/javascript" src="./assets/js/wow.js"></script>
+    <script type="text/javascript" src="assets/clock_assets/flipclock.js"></script>
+    <script>
+        wow = new WOW({
+            animateClass: 'animated',
+            offset: 100
         });
-		</script>
-		<div class="modal-dialog" role="document">
-			<div class="modal-content"); background-repeat: no-repeat;
-			background-size: cover;">
-			<!-- <div class="modal-content" style="background-image: url('images/hexagon.jpg'); background-repeat: no-repeat; -->
-		  <!-- background-size: cover;"> -->
-			<div class="modal-body">
-				<!-- <div class=row> -->
-					<!-- <div class="col-md-6">
-						<img src="images/StickPadWhite.png">
-					</div> -->
-					<!-- <div class="col-md-6"> -->
-						<!-- <img src="images/MintyDAO.png"> -->
-					<!-- </div> -->
-					<br>
-						<h3>Follow Us</h3>
-						<ul id="wrapper" class="modal-ul">
-							<br>
-							<li><a href="https://twitter.com/MintyDAO" target="_blank" value="StbTw"
-								title="Twitter">Twitter <i class="fab fa-twitter" style="padding-bottom: 10px;"></i></i></a>
-							</li>
-							<li><a href="https://t.me/MintyDAOnews" target="_blank" value="StbTgNews"
-								title="Telegram">TG News <i class="fab fa-telegram-plane" style="padding-bottom: 10px;"></i></a></li>
-							<li><a href="https://discord.gg/x4MeeXUW3R" target="_blank" value="StbDiscord"
-								title="Discord">Discord <i class="fab fa-discord" style="padding-bottom: 10px;"></i></i></a>
-							</li>
-							<li><a href="https://github.com/MintyDAO" target="_blank" value="StbGithub"
-								title="Github">Github<i class="fab fa-github" style="padding-bottom: 10px;"></i></i></a></li>
-							</li>
-							<li><a href="https://www.reddit.com/r/MintyDAO" target="_blank" value="StbReddit"
-								title="Reddit">Reddit <i class="fab fa-reddit" style="padding-bottom: 10px;"></i></i></a>
-							</li>
-							<li><a href="https://mintydao.substack.com/" target="_blank" value="StbSubstack"
-								title="Substack">Substack <i class="fab fa-medium-m" style="padding-bottom: 10px;"></i></a>
-							</li>
-							<!-- <li><a href="https://mintydao.medium.com/" target="_blank" value="StbMedium"
-								title="Medium">Medium <i class="fab fa-medium-m" style="padding-bottom: 10px;"></i></a>
-							</li> -->
-							<li><a href="https://www.instagram.com/MintyDAOio/" target="_blank"
-								value="StbIg" title="Instagram" class="external">Instagram <i class="fab fa-instagram" style="padding-bottom: 10px;"></i></i></a>
-							</li>
-							<!-- <li><a href="https://www.youtube.com/channel/UCY-sZVxcIhQfI8K3Hp2HGnQ"
-								target="_blank" value="StbYt" title="YouTube">YouTube <i
-								class="fab fa-youtube" style="padding-bottom: 10px;"></i></i></a>
-							</li> -->
-							<li><a href="https://t.me/MintyDAOio" target="_blank" value="StbTgChat"
-								title="TelegramChat">TG Chat <i class="fab fa-telegram-plane" style="padding-bottom: 10px;"></i></i></a>
-							</li>
-							<br>
-						</ul>
-
-
-			</div>
-		</div>
-		<!-- <div class="modal-footer">
-			</div>
-		  </div>
-		</div> -->
-	  </div>
-
-	<!-- <script>
-		//wow-animation
-		new WOW().init();
-	</script> -->
-			<!-- TODO: WHY: if we remove this, mobile popup behavior gets screwed -->
-			<!-- <script src="js/shooting-stars.js" type="text/javascript"></script> -->
-
-
-	<script type="text/javascript"></script>
-
+        wow.init();
+        $(window).scroll(function() {
+            var theta = $(window).scrollTop() / 100 % Math.PI;
+            $('.MintyDAO_LOGO').css({ transform: 'rotate(' + 1*theta + 'rad)' });
+            $('.MintyDAO_LOGO2').css({ transform: 'rotate(' + -1*theta + 'rad)' });
+        });
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        });
+        $(function () {
+            FlipClock.Lang.Custom = { days: 'Days', hours: 'Hours', minutes: 'Minutes', seconds: 'Seconds' };
+            var opts = {
+                clockFace: 'DailyCounter',
+                countdown: true,
+                language: 'Custom'
+            };
+            opts.classes = {
+                active: 'flip-clock-active',
+                before: 'flip-clock-before',
+                divider: 'flip-clock-divider',
+                dot: 'flip-clock-dot',
+                label: 'flip-clock-label',
+                flip: 'flip',
+                play: 'play',
+                wrapper: 'flip-clock-small-wrapper'
+            };
+            var countdown = 1666278000 - ((new Date().getTime()) / 1000); // from: 03/22/2021 10:00 am -0700
+            countdown = Math.max(1, countdown);
+            $('.clock-builder-output').FlipClock(countdown, opts);
+        });
+        $(document).ready(function () {
+            $(".collapse.show").each(function () {
+                $(this).prev(".card-header").find(".fa").addClass("fa-minus").removeClass("fa-plus");
+            });
+            $(".collapse").on("show.bs.collapse", function () {
+                $(this).prev(".card-header").find(".fa").removeClass("fa-plus").addClass("fa-minus");
+            }).on("hide.bs.collapse", function () {
+                $(this).prev(".card-header").find(".fa").removeClass("fa-minus").addClass("fa-plus");
+            });
+        });
+    </script>
 </body>
-
 </html>
